@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { grey } from '@mui/material/colors';
+import { PanelGroup, Panel, PanelResizeHandle } from 'react-resizable-panels'
 
 import { ExplorerFile, pathsToTree } from '../utils';
 import defaultFiles from '../defaultFiles';
@@ -16,17 +17,19 @@ export const Workspace = () => {
     roots = pathsToTree(defaultFiles);
   }
 
-  return <Box sx={{
-    display: 'grid',
-    gridAutoColumns: '1fr',
-    gap: 1,
-    height: '100%'
-  }}>
-    <Box sx={{ gridRow: '1', gridColumn: 'span 1', bgcolor: grey[100], padding: '15px' }} data-test="explorer-box">
-      {roots.map((root) => <Explorer file={root} selectedFile={selectedFile} setSelectedFile={setSelectedFile} />)}
-    </Box>
-    <Box sx={{ gridRow: '1', gridColumn: 'span 3' }} data-test="editor-box">
-      {selectedFile && <Editor selectedFile={selectedFile} updateFile={updateFile} />}
-    </Box>
-  </Box>;
+  return (
+    <PanelGroup direction="horizontal">
+      <Panel defaultSize={20} minSize={10}>
+        <Box sx={{ bgcolor: grey[100], padding: '15px', height: '100%' }} data-test="explorer-box">
+          {roots.map((root) => <Explorer file={root} selectedFile={selectedFile} setSelectedFile={setSelectedFile} />)}
+        </Box>
+      </Panel>
+      <PanelResizeHandle />
+      <Panel defaultSize={80} minSize={40}>
+        <Box sx={{ height: '100%' }} data-test="explorer-box">
+          {selectedFile && <Editor selectedFile={selectedFile} updateFile={updateFile} />}
+        </Box>
+      </Panel>
+    </PanelGroup>
+  )
 };

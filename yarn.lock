@@ -855,13 +855,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/file-saver@npm:^2":
-  version: 2.0.7
-  resolution: "@types/file-saver@npm:2.0.7"
-  checksum: 10c0/c6b88a1aea8eec58469da2a90828fef6e9d5d590c7094fb959783d7c32878af80d39439734f3d41b78355dadb507f606e3d04a29a160c85411c65251e58df847
-  languageName: node
-  linkType: hard
-
 "@types/hast@npm:^2.0.0":
   version: 2.3.10
   resolution: "@types/hast@npm:2.3.10"
@@ -1815,7 +1808,6 @@ __metadata:
     "@monaco-editor/react": "npm:^4.4.5"
     "@mui/icons-material": "npm:^5.15.10"
     "@mui/material": "npm:^5.15.10"
-    "@types/file-saver": "npm:^2"
     "@types/node": "npm:^16.11.47"
     "@types/react": "npm:^17.0.48"
     "@types/react-dom": "npm:^17.0.17"
@@ -1826,6 +1818,7 @@ __metadata:
     prettier: "npm:2.8.8"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-resizable-panels: "npm:^2.0.9"
     seti-icons: "npm:^0.0.4"
     typescript: "npm:^4.7.4"
     vite: "npm:^3.0.4"
@@ -4342,6 +4335,16 @@ __metadata:
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
   checksum: 10c0/b8ae07ad153357d77830928a7f1fc2df837aabefee907fa273ba04c7643f3b860e986f1d4b7ada9b721c8d79b8c24b5b911a314a1a2398b105f1b13d19ea2b8d
+  languageName: node
+  linkType: hard
+
+"react-resizable-panels@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "react-resizable-panels@npm:2.0.9"
+  peerDependencies:
+    react: ^16.14.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/0302ab32d3aa7d2887a2ad58882e447a8e22cef3c5c728cde7436442fcd7475969a86bb45d1a6e285b1b4e2a9ac49d13a0e2df4b29bc63542dc99044309e211c
   languageName: node
   linkType: hard
 
