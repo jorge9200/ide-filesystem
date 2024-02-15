@@ -1,4 +1,4 @@
-import { File } from './Workspace/WorkspaceContext';
+import { DefaultFile } from "./utils";
 
 export default [
   {
@@ -103,4 +103,4 @@ export const WidgetList = ({ widgets }) => {
   </body>
 </html>`
   }
-] as File[];
+] as DefaultFile[];

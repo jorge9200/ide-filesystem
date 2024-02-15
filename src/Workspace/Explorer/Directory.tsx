@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import Box from '@mui/material/Box';
 
+import { ExplorerFile } from '../../utils';
 
-export const Directory = () => {
-  const [isOpen, setIsOpen] = useState(false);
+type Directory = {
+  file: ExplorerFile;
+  isOpen: boolean;
+}
+
+export const Directory: React.FC<Directory> = ({ file, isOpen }) => {
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }} onClick={() => setIsOpen(!isOpen)}>
+    <>
       {isOpen ? <KeyboardArrowDownIcon /> : <KeyboardArrowRightIcon />}
-      <span>Folder</span>
-    </Box>
+      <span>{file.name}</span>
+    </>
   )
 };

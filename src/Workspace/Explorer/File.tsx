@@ -1,13 +1,17 @@
 import React from 'react';
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
-import Box from '@mui/material/Box';
+import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 
+import { ExplorerFile } from '../../utils';
 
-export const File = () => {
+type File = {
+  file: ExplorerFile;
+}
+
+export const File: React.FC<File> = ({ file }) => {
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }} >
-      <InsertDriveFileIcon />
-      <span>File</span>
-    </Box>
+    <>
+      <InsertDriveFileOutlinedIcon fontSize="small" />
+      <span>{file.name}</span>
+    </>
   )
 };
