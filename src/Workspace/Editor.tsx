@@ -5,15 +5,15 @@ import { ExplorerFile } from '../utils';
 
 type Editor = {
   selectedFile: ExplorerFile;
-  updateFile: (fileName: string, newContent: string) => void;
+  modifyFile: (newContent: string) => void;
 }
 
-export const Editor: React.FC<Editor> = ({ selectedFile, updateFile }) => {
+export const Editor: React.FC<Editor> = ({ selectedFile, modifyFile }) => {
   return <CodeEditor
     value={selectedFile.contents}
     language={selectedFile.name.split('.').pop()}
     placeholder="Please enter some code."
-    onChange={(evn) => updateFile(selectedFile.name, evn.target.value)}
+    onChange={(evn) => modifyFile(evn.target.value)}
     padding={15}
     style={{
       backgroundColor: "white",

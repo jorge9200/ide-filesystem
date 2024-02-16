@@ -6,7 +6,9 @@
     "jsx": "react",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["cypress"],
+    "lib": ["es6", "dom", "es2016"],
   },
   "include": ["src"]
 }
